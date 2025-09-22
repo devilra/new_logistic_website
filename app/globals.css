@@ -1,0 +1,58 @@
+@import "tailwindcss";
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-saira: "Saira", sans-serif;
+  --font-iceBerg: "Iceberg";
+  --font-newRocker: "New_Rocker";
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: white;
+    --foreground: black;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-saira);
+}
+
+.logo {
+  font-family: var(--font-iceBerg);
+}
+
+#nprogress .peg {
+  box-shadow: none !important; /*  remove default glow */
+}
+
+#nprogress .bar {
+  background: linear-gradient(90deg, #da0492, #f70606, #fd3b06, #ff009d);
+  background-size: 200% 100%;
+  animation: progress-gradient 1.5s linear infinite;
+  position: fixed;
+  z-index: 1031;
+  top: 0px !important; /* force  move */
+  left: 0;
+  width: 100%;
+  height: 4px !important;
+}
+
+#nprogress .bar {
+  background: linear-gradient(
+    90deg,
+    #da0492,
+    #f70606,
+    #fd3b06,
+    #ff009d
+  ) !important;
+}
