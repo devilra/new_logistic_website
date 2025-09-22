@@ -17,11 +17,11 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white  z-50">
       <div className="max-w-7xl mx-auto flex justify-end md:justify-between items-center px-6 py-3">
-        <div className="flex justify-end  md:items-center gap-2">
+        <div className="flex md:justify-end   items-center  md:items-center gap-2">
           {/* Mobile Menu */}
 
-          <div>
-            <Link href="/" className="text-xl flex items-center">
+          <div className="">
+            <Link href="/" className="text-xl md:flex  md:items-center">
               <img
                 src="/logo2.png"
                 alt="logo"
@@ -29,7 +29,7 @@ const Navbar = () => {
                 // height={20}
                 className="h-20 w-20"
               />
-              <h1 className="logo md:pt-2 text-black font-bold ">
+              <h1 className="logo md:pt-2 hidden md:block text-black font-bold ">
                 Neuf Dawn Supply Chain & Service <br />
                 Pvt Ltd.
               </h1>
