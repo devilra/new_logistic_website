@@ -16,8 +16,8 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white  z-50">
-      <div className="max-w-7xl mx-auto flex justify-end md:justify-between items-center px-6 py-3">
-        <div className="flex md:justify-end   items-center  md:items-center gap-2">
+      <div className="max-w-7xl mx-auto flex flex-row justify-between  md:justify-between px-2 md:px-6 py-3">
+        <div className="flex md:justify-end justify-between  md:items-center gap-2">
           {/* Mobile Menu */}
 
           <div className="">
@@ -34,7 +34,10 @@ const Navbar = () => {
                 Pvt Ltd.
               </h1>
             </Link> */}
-            <Link href="/" className="flex items-center gap-2 flex-1">
+            <Link
+              href="/"
+              className="flex items-center justify-between gap-2 flex-1"
+            >
               <img
                 src="/logo2.png"
                 alt="logo"
@@ -47,11 +50,11 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="flex md:hidden items-center gap-4">
-            <MdOutlineSearch size={25} className="text-gray-700" />
+          <div className="flex md:hidden items-center gap-4 pl-24">
+            {/* <MdOutlineSearch size={25} className="text-gray-700" />
             <MdOutlineContactSupport size={23} className="text-gray-700" />
-            <GrContact size={20} className="text-gray-700" />
-            <button onClick={() => setOpen(!open)}>
+            <GrContact size={20} className="text-gray-700" /> */}
+            <button onClick={() => setOpen(!open)} className="">
               {open ? (
                 <RxCross2 size={25} />
               ) : (
