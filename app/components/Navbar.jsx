@@ -21,7 +21,7 @@ const Navbar = () => {
           {/* Mobile Menu */}
 
           <div className="">
-            <Link href="/" className="text-xl md:flex  md:items-center">
+            {/* <Link href="/" className="text-xl md:flex  md:items-center">
               <img
                 src="/logo2.png"
                 alt="logo"
@@ -33,10 +33,21 @@ const Navbar = () => {
                 Neuf Dawn Supply Chain & Service <br />
                 Pvt Ltd.
               </h1>
+            </Link> */}
+            <Link href="/" className="flex items-center gap-2 flex-1">
+              <img
+                src="/logo2.png"
+                alt="logo"
+                className="h-12 w-12 sm:h-14 sm:w-14 md:h-20 md:w-20"
+              />
+              <h1 className="text-sm sm:text-base md:text-lg font-bold text-black leading-tight whitespace-normal break-words">
+                Neuf Dawn Supply Chain & Service <br />
+                Pvt Ltd.
+              </h1>
             </Link>
           </div>
 
-          <div className="flex  md:hidden ml-20 items-center gap-4">
+          <div className="flex md:hidden items-center gap-4">
             <MdOutlineSearch size={25} className="text-gray-700" />
             <MdOutlineContactSupport size={23} className="text-gray-700" />
             <GrContact size={20} className="text-gray-700" />
