@@ -43,14 +43,14 @@ const Navbar = () => {
                 alt="logo"
                 className="h-12 w-12 sm:h-14 sm:w-14 md:h-20 md:w-20"
               />
-              <h1 className="text-sm sm:text-base md:text-lg font-bold text-black leading-tight whitespace-normal break-words">
+              <h1 className="text-sm sm:text-base md:text-2xl font-bold text-black leading-tight whitespace-normal break-words">
                 Neuf Dawn Supply Chain & Service <br />
                 Pvt Ltd.
               </h1>
             </Link>
           </div>
 
-          <div className="flex md:hidden items-center gap-4 pl-24">
+          <div className="flex md:block lg:hidden items-center gap-4 pl-24 md:pl-[400px]">
             {/* <MdOutlineSearch size={25} className="text-gray-700" />
             <MdOutlineContactSupport size={23} className="text-gray-700" />
             <GrContact size={20} className="text-gray-700" /> */}
@@ -116,7 +116,7 @@ const Navbar = () => {
                     <Link href="/contact">Contact us</Link>
                   </li>
                 </ul>
-
+                {/* 
                 <div className="mt-6 px-6 flex gap-3">
                   <button className="w-1/2 px-4 py-2 border rounded">
                     Register
@@ -124,7 +124,7 @@ const Navbar = () => {
                   <button className="w-1/2 px-4 py-2 bg-sky-500 text-white rounded">
                     Login
                   </button>
-                </div>
+                </div> */}
               </motion.div>
             </>
           )}
@@ -132,7 +132,7 @@ const Navbar = () => {
 
         {/* Desktop navlink_1 */}
 
-        <div className="hidden md:block">
+        <div className="hidden md:hidden lg:block">
           <ul className="flex gap-5">
             {navlink_1.map((l, index) => (
               <div key={index}>
@@ -151,7 +151,7 @@ const Navbar = () => {
 
       {/* Desktop_Navlink_2 */}
 
-      <div className="px-6 hidden md:flex md:justify-between md:items-center py-2">
+      <div className="px-6 hidden md:hidden lg:flex  lg:justify-between lg:items-center py-2">
         <ul className="flex gap-5">
           {navLink_2.map((l, index) => (
             <div key={index}>
@@ -165,7 +165,7 @@ const Navbar = () => {
             </div>
           ))}
         </ul>
-        <div className="flex gap-2">
+        {/* <div className="flex gap-2">
           <Link
             href="#"
             className="flex items-center gap-2 border p-2 rounded hover:bg-gray-200 transition-all duration-300 border-gray-200"
@@ -180,7 +180,7 @@ const Navbar = () => {
             <RiContactsLine />
             <span>Login</span>
           </Link>
-        </div>
+        </div> */}
       </div>
 
       <div className="border-b border-gray-200"></div>

@@ -1,4 +1,8 @@
 import { LineChart, Monitor, TreePine, Workflow } from "lucide-react";
+import { HiMiniCpuChip } from "react-icons/hi2";
+import { GiCircuitry } from "react-icons/gi";
+import { GoRocket } from "react-icons/go";
+import { FaHandHoldingMedical } from "react-icons/fa6";
 
 const insights = [
   {
@@ -7,7 +11,7 @@ const insights = [
     // "Rethinking trade routes: how global supply chains are being rewired",
     //date: "18 Aug 2025",
     //tag: "Resilience",
-    img: "/images/g1.jpg",
+    img: "/home/e1.jpg",
     className: "md:col-span-2 md:row-span-2",
   },
   {
@@ -16,7 +20,7 @@ const insights = [
     //   "When reliability is the name of the game: Building supply chain strength in Asia-Pacific",
     // date: "13 Aug 2025",
     // tag: "Resilience",
-    img: "/images/g2.jpg",
+    img: "/home/e9.jpg",
     className: "md:col-span-2",
   },
   {
@@ -25,7 +29,7 @@ const insights = [
     //   "Building resilient supply chains: how strategic warehousing networks and...",
     // date: "6 Aug 2025",
     // tag: "Resilience",
-    img: "/images/i3.jpg",
+    img: "/home/e2.jpg",
     className: "md:col-span-1 md:row-span-1",
   },
   {
@@ -34,8 +38,8 @@ const insights = [
     //   "Building resilient supply chains: how strategic warehousing networks and...",
     // date: "6 Aug 2025",
     // tag: "Resilience",
-    img: "/images/g3.jpg",
-    className: "md:col-span-1 md:row-span-1",
+    img: "/home/e4.jpg",
+    className: "md:col-span-1 w-[300px] md:row-span-1",
   },
   {
     id: 5,
@@ -43,7 +47,7 @@ const insights = [
     //   "Building resilient supply chains: how strategic warehousing networks and...",
     // date: "6 Aug 2025",
     // tag: "Resilience",
-    img: "/images/g4.jpg",
+    img: "/home/e10.jpg",
     className: "md:col-span-2 md:row-span-1",
   },
   {
@@ -52,7 +56,7 @@ const insights = [
     //   "Building resilient supply chains: how strategic warehousing networks and...",
     // date: "6 Aug 2025",
     // tag: "Resilience",
-    img: "/images/g5.jpg",
+    img: "/home/e7.jpg",
     className: "md:col-span-1 md:row-span-1",
   },
   {
@@ -61,31 +65,31 @@ const insights = [
     //   "Building resilient supply chains: how strategic warehousing networks and...",
     // date: "6 Aug 2025",
     // tag: "Resilience",
-    img: "/images/g6.jpg",
+    img: "/home/e9.jpg",
     className: "md:col-span-1 md:row-span-1",
   },
 ];
 
 const insights_2 = [
   {
-    title: "Integrated logistics",
-    desc: "Everything is connected, especially logistics. Supply chains span the globe, with each component affecting the next. Read on for more insights on all things integrated logistics.",
-    icon: <Workflow className="w-12 h-12 text-sky-500" />,
+    title: "Electronics Manufacturing",
+    desc: "ESD protection is critical in electronics manufacturing lines.Even a small static discharge can damage microchips.Products like mats, straps, and ionizers protect delicate components.",
+    icon: <HiMiniCpuChip className="w-12 h-12 text-sky-500" />,
   },
   {
-    title: "Digitalisation",
-    desc: "The digital world is vital to companies, with many choosing to use it to reach and expand their customer base. Read on for the latest digital innovations within logistics.",
-    icon: <Monitor className="w-12 h-12 text-sky-500" />,
+    title: "Semiconductor Plants",
+    desc: "Semiconductor wafers are extremely sensitive to static.ESD flooring and protective garments are mandatory here.Controlled environments ensure stable device performance.Without ESD, millions of chips could fail in seconds.Our solutions safeguard every step of wafer processing.",
+    icon: <GiCircuitry className="w-12 h-12 text-sky-500" />,
   },
   {
-    title: "Growth",
-    desc: "Expansion, connection, and growth; three key elements most companies are constantly looking to invest in and develop in an ever-changing game of logistics. Click here for all things growth.",
-    icon: <LineChart className="w-12 h-12 text-sky-500" />,
+    title: "Automotive Electronics",
+    desc: "Modern vehicles run on advanced electronics.From sensors to infotainment, static can harm systems.ESD benches and tools ensure safe assembly of parts.",
+    icon: <GoRocket className="w-12 h-12 text-sky-500" />,
   },
   {
-    title: "Sustainability",
-    desc: "Decarbonisation is reshaping supply chains, calling for a shift in how logistics operates. Read on for insights into what it means for your business – and how you can adapt.",
-    icon: <TreePine className="w-12 h-12 text-sky-500" />,
+    title: "Medical Electronics",
+    desc: "Critical medical devices use high-precision electronics.ESD damage can risk patient safety and accuracy.Protective flooring, gloves, and storage solutions are vital.Hospitals and labs depend on static-safe handling.ESD ensures devices function flawlessly every time.",
+    icon: <FaHandHoldingMedical className="w-12 h-12 text-sky-500" />,
   },
 ];
 

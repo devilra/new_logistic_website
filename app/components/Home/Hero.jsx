@@ -11,22 +11,22 @@ const Hero = () => {
     <div className="min-h-screen">
       {/* Hero video section */}
       <section className="relative w-full h-[550px] md:h-[400px]  md:rounded-br-[70px] overflow-hidden">
-        <video
+        {/* <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           src="https://videos.pexels.com/video-files/4320049/4320049-hd_1920_1080_30fps.mp4"
           autoPlay
           loop
           muted
           playsInline
-        />
-        {/* <img
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          // src="/videos/bg-2.mp4"
-          src="/bg.jpg"
         /> */}
-        <div className="absolute inset-0 bg-black/45"></div>
-        <div className="z-10 relative flex flex-col items-start pt-10 justify-center md:h-[80%] px-6 text-white">
-          <h1 className="text-4xl md:text-5xl font-light leading-tight">
+        <img
+          className="absolute top-0 left-0 w-full h-full object-cover object-top"
+          // src="/videos/bg-2.mp4"
+          src="/banner.jpg"
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="z-10 relative flex flex-col h-full items-center pt-10 justify-center md:h-[80%] px-6 text-white">
+          {/* <h1 className="text-4xl md:text-5xl font-light leading-tight">
             Resilience insights
           </h1>
           <p className="mt-4 max-w-2xl text-base md:text-md">
@@ -44,6 +44,19 @@ const Hero = () => {
             <button className="px-2 py-2 bg-transparent w-full md:w-[220px] border border-white rounded-lg hover:bg-white/10 transition">
               Find out how we can help
             </button>
+          </div> */}
+          <div className="md:bg-gray-300/5 lg:bg-gray-300/5">
+            <h1 className="md:text-4xl lg:text-5xl px-1 md:px-10 lg:px-15 md:py-5 lg:py-7 text-neutral-300/50 text-4xl">
+              Neuf Dawn Supply Chain & Service Pvt Ltd
+            </h1>
+          </div>
+          <div className="">
+            <h1 className="pt-5 text-xl text-neutral-300/70">We focus on : </h1>
+            <ul className="list-decimal space-y-1 pl-10 pt-2 tracking-[1px] text-neutral-300/80 text-[12px]">
+              <li>Leading of ESD industry</li>
+              <li>High Quality/ Reasonable Pricing</li>
+              <li>After Sale Service</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -62,8 +75,8 @@ const Hero = () => {
                   onChange={(e) => setSelectedTab(e.target.value)}
                   className="w-full outline-none rounded-md px-3 py-2"
                 >
-                  <option value="insights">Logistics insights</option>
-                  <option value="help">How we help</option>
+                  <option value="insights">ESD Products</option>
+                  {/* <option value="help">How we help</option> */}
                 </select>
               </div>
               <div className="hidden md:flex space-x-8 relative border-b-1 border-gray-300">
@@ -75,9 +88,9 @@ const Hero = () => {
                       : ""
                   }`}
                 >
-                  Logistics insights
+                  ESD Products
                 </button>
-                <button
+                {/* <button
                   onClick={() => setSelectedTab("help")}
                   className={`relative py-2 text-[16px] ${
                     selectedTab === "help"
@@ -86,7 +99,7 @@ const Hero = () => {
                   }`}
                 >
                   How we help
-                </button>
+                </button> */}
               </div>
 
               {/* <div className="pb-4 space-x-5">
@@ -101,10 +114,12 @@ const Hero = () => {
 
           {/* Content below the sticky heading - scrolls under the heading */}
           <div className="pt-6 pb-24 px-4 md:px-8">
-            <h4 className="text-xl font-semibold">Latest insights</h4>
+            <h4 className="text-xl font-semibold">Why ESD Matters</h4>
             <p className="text-gray-600 mt-2 max-w-2xl">
-              Here are the most recent articles, trends and research on
-              resilience within logistics.
+              ESD products are designed to protect sensitive electronic
+              components from static electricity damage.In industries like
+              electronics manufacturing, automation, and supply chain, these
+              products ensure safe handling and high reliability.
             </p>
             <section className="px-1 py-12">
               <div className="grid md:grid-cols-4 auto-rows-[200px] gap-6">
@@ -117,7 +132,7 @@ const Hero = () => {
                     <img
                       src={item.img}
                       alt={item.title}
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="object-cover transition-transform w-full duration-500 group-hover:scale-110"
                     />
 
                     {/* Black Gradient Overlay */}
@@ -143,6 +158,18 @@ const Hero = () => {
                 </button>
               </div>
 
+              <div className="mt-10">
+                <h2 className="text-2xl md:text-4xl  mb-4 ">
+                  Application Field
+                </h2>
+                <p className="text-gray-700 mb-4">
+                  ESD products are widely used in electronics manufacturing,
+                  semiconductor plants, automotive, aerospace, and medical
+                  device industries. These fields handle highly sensitive
+                  components where static discharge can cause major damage.
+                </p>
+              </div>
+
               <div className="pt-16 ">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                   {/* Left Content */}
@@ -153,33 +180,36 @@ const Hero = () => {
                       className="rounded-xl shadow-lg w-full h-auto"
                     />
                   </div>
+
                   <div className="md:pt-5">
                     <h2 className="text-2xl md:text-4xl  mb-4 ">
-                      Change course with supply chain resilience
+                      Structure of ESD Products
                     </h2>
-                    <p className="text-gray-700 mb-4">
-                      Resilient supply chains create opportunity. Even in a
-                      world shaped by global uncertainty, some businesses aren’t
-                      just adapting, they’re thriving. These frontrunners treat
-                      resilience not as damage control, but as a strategic
-                      advantage.
-                    </p>
                     <p className="text-gray-700 mb-6 order-4">
-                      In Course for Change – an exclusive series of research
-                      reports we reveal what sets these frontrunners apart
-                      across five key sectors. With insights from global brands,
-                      explore how talent, tools, collaboration and culture can
-                      help you stay ahead.
+                      Most ESD products are designed with conductive,
+                      dissipative, and shielding materials. Their layered
+                      structure helps safely neutralize static charges, ensuring
+                      smooth functioning of delicate devices.
                     </p>
-                    <button className="bg-sky-500 hover:bg-sky-600 text-white font-medium px-6 py-3 rounded-md transition duration-200">
+                    <h2 className="text-2xl md:text-4xl  mb-4 ">
+                      Why It Matters
+                    </h2>
+                    <p className="text-gray-700 mb-6 order-4">
+                      By implementing ESD-safe workstations, flooring, and
+                      accessories, companies reduce product failures, improve
+                      reliability, and maintain international quality standards.
+                      This creates a safer and more efficient working
+                      environment.
+                    </p>
+                    {/* <button className="bg-sky-500 hover:bg-sky-600 text-white font-medium px-6 py-3 rounded-md transition duration-200">
                       Access the reports
-                    </button>
+                    </button> */}
                   </div>
 
                   {/* Right Image */}
                   <div className="md:flex hidden justify-center">
                     <img
-                      src="/home/h7.webp"
+                      src="/home/e12.jpg"
                       alt="Supply chain resilience"
                       className="rounded-xl shadow-lg w-full h-[340px]"
                     />
@@ -192,7 +222,7 @@ const Hero = () => {
           <section className="pt-5 pb-20 bg-gray-50">
             <div className="max-w-9xl mx-auto px-6 text-center">
               <h2 className="text-2xl md:text-4xl font-[300] text-left py-10 mb-12">
-                Discover insights categories
+                Where ESD Products Are Used
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 {insights_2.map((item, idx) => (
@@ -221,22 +251,25 @@ const Hero = () => {
               {/* Left Content */}
               <div className="">
                 <img
-                  src="/home/h9.avif"
-                  alt="Supply chain resilience"
+                  src="/home/e13.jpg"
+                  alt="UREC ESD Gloves"
                   className="rounded-xl shadow-lg w-full h-auto"
                 />
               </div>
               <div className="md:pt-5">
                 <h2 className="text-2xl md:text-4xl  mb-4 ">
-                  Stay ahead with the latest in logistics
+                  UREC ESD Gloves & Wristband
                 </h2>
                 <p className="text-gray-700 mb-4">
-                  Enter our world of resilient logistics. Be inspired and gain
-                  knowledge on relevant business insights, in a few clicks.
+                  Protect sensitive electronics and components from damaging
+                  static discharge. Our anti-static gloves and wrist strap set
+                  ensure safe handling in labs and assembly lines. Reliable,
+                  comfortable, and compliant — keeping your devices safe every
+                  step of the way.
                 </p>
 
                 <button className="bg-neutral-950 hover:bg-neutral-700 text-[15px] text-white font-medium px-6 md:px-4 py-2 rounded-md transition duration-200">
-                  Unlock Insights
+                  Explore →
                 </button>
               </div>
             </div>
@@ -245,14 +278,14 @@ const Hero = () => {
             <div
               className="relative bg-cover bg-center h-[270px] md:h-[520px]  flex items-center  md:items-center justify-center md:justify-start text-center md:text-left"
               style={{
-                backgroundImage: "url('/home/h10.avif')",
+                backgroundImage: "url('/home/e14.png')",
               }}
             >
-              <div className="absolute inset-0 bg-black/40 rounded-xl"></div>
+              <div className="absolute inset-0 bg-black/65 rounded-xl"></div>
               <div className="relative z-10 max-w-4xl px-4 text-start md:px-8 py-6 md:pt-16">
-                <h2 className="text-2xl  md:text-4xl  text-white/90 leading-snug mb-4">
-                  Want to learn more about how we help customers with resilient
-                  logistics?
+                <h2 className="text-2xl  md:text-4xl  text-white leading-snug mb-4">
+                  Protect semiconductor components from static while ensuring
+                  precision and safety in every production step
                 </h2>
                 <button className="bg-white sm:w-auto hover:bg-white/80  font-medium px-5 py-2 rounded-md transition duration-200">
                   How we help

@@ -6,26 +6,26 @@ import { RiContactsFill } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
 
 const navlink_1 = [
-  {
-    icon: <GrLanguage />,
-    title: "EN",
-    path: "#",
-  },
-  {
-    icon: <MdOutlineSearch />,
-    title: "Search",
-    path: "#",
-  },
-  {
-    icon: <IoMdNotificationsOutline />,
-    title: "Notifications",
-    path: "#",
-  },
-  {
-    icon: <MdOutlineContactSupport />,
-    title: "Support",
-    path: "#",
-  },
+  // {
+  //   icon: <GrLanguage />,
+  //   title: "EN",
+  //   path: "#",
+  // },
+  // {
+  //   icon: <MdOutlineSearch />,
+  //   title: "Search",
+  //   path: "#",
+  // },
+  // {
+  //   icon: <IoMdNotificationsOutline />,
+  //   title: "Notifications",
+  //   path: "#",
+  // },
+  // {
+  //   icon: <MdOutlineContactSupport />,
+  //   title: "Support",
+  //   path: "#",
+  // },
   {
     icon: <GrContact />,
     title: "Contact Us",
@@ -35,22 +35,23 @@ const navlink_1 = [
 
 const navLink_2 = [
   {
-    title: "Prices",
+    title: "Home",
   },
   {
-    title: "Book",
+    title: "About Us",
+    //icon: <IoIosArrowDown />,
+  },
+  {
+    title: "ESD Services",
     icon: <IoIosArrowDown />,
   },
   {
-    title: "Schedules",
+    title: "Products",
   },
-  {
-    title: "Tracking",
-  },
-  {
-    title: "Manage",
-    icon: <IoIosArrowDown />,
-  },
+  // {
+  //   title: "Industries Served",
+  //   icon: <IoIosArrowDown />,
+  // },
   {
     title: "Services",
     icon: <IoIosArrowDown />,
