@@ -3,6 +3,7 @@
 import { insights, insights_2 } from "@/app/constants/HeroPage";
 import Image from "next/image";
 import React, { useState } from "react";
+import CustomerCarosel from "./CustomerCarosel";
 
 const Hero = () => {
   const [selectedTab, setSelectedTab] = useState("insights");
@@ -65,7 +66,7 @@ const Hero = () => {
       <section className="">
         {/* The sticky heading container. Use position: sticky so it becomes fixed when it reaches the top of the viewport. top should equal navbar height (4rem). */}
         <div className="mt-6">
-          <div className="sticky top-12 md:top-36 z-20 px-4 md:px-8 bg-white">
+          <div className="sticky  top-12 md:top-36 z-20 px-4 md:px-8  bg-white">
             {/* Add a little inner wrapper with border and background to match the site look */}
             <div className="py-4 md:py-4 bg-white  border-gray-200">
               {/* Mobile: Dropdown */}
@@ -121,7 +122,7 @@ const Hero = () => {
               electronics manufacturing, automation, and supply chain, these
               products ensure safe handling and high reliability.
             </p>
-            <section className="px-1 py-12">
+            <section className="px-1 py-12 ">
               <div className="grid md:grid-cols-4 auto-rows-[200px] gap-6">
                 {insights.map((item) => (
                   <div
@@ -274,7 +275,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="py-20">
+          <div className="pt-20">
             <div
               className="relative bg-cover bg-center h-[270px] md:h-[520px]  flex items-center  md:items-center justify-center md:justify-start text-center md:text-left"
               style={{
@@ -295,18 +296,23 @@ const Hero = () => {
           </div>
         </div>
 
+        {/* customers--------------------sections---------------------- */}
+
+        <div className="">
+          <CustomerCarosel />
+        </div>
+
         {/* form Section */}
 
         <section className="max-w-6xl mx-auto px-6 pb-28">
           <h2 className="text-2xl md:text-3xl mb-3">
-            Sign up to The Logistics Pulse newsletter
+            Sign up to the ESD products newsletter
           </h2>
           <p className="text-gray-600 mb-8">
-            Receive our Insights directly in your mailbox by signing up through
-            this form and enter a world of truly Integrated logistics. Get
-            inspired by our selection of articles that help you navigate supply
-            chains, understand industry trends, and shape your logistics
-            strategy. You can unsubscribe anytime.
+            Stay updated with the latest in ESD solutions, automation
+            innovations, and supply chain insights. Join our community to
+            receive expert tips, industry trends, and exclusive updates straight
+            to your inbox.
           </p>
 
           {/* Form */}
@@ -351,9 +357,10 @@ const Hero = () => {
                 </label>
                 <select className="border border-gray-300 rounded-md px-3 py-2 w-full">
                   <option>Select your Job role</option>
-                  <option>Manager</option>
-                  <option>Logistics Specialist</option>
-                  <option>Supply Chain Analyst</option>
+                  <option>ESD Engineer / Specialist</option>
+                  <option>Quality Assurance Specialist</option>
+                  <option>Technical Support Engineer</option>
+                  <option>ESD Training Coordinator</option>
                 </select>
               </div>
             </div>

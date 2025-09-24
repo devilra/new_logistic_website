@@ -15,7 +15,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white  z-50">
+    <nav className="fixed top-0  left-0 w-full bg-white  z-50">
       <div className="max-w-7xl mx-auto flex flex-row justify-between  md:justify-between px-2 md:px-6 py-3">
         <div className="flex md:justify-end justify-between  md:items-center gap-2">
           {/* Mobile Menu */}

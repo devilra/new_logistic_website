@@ -39,7 +39,7 @@ const insights = [
     // date: "6 Aug 2025",
     // tag: "Resilience",
     img: "/home/e4.jpg",
-    className: "md:col-span-1 w-[300px] md:row-span-1",
+    className: "md:col-span-1    md:row-span-1",
   },
   {
     id: 5,
