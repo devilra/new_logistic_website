@@ -10,9 +10,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { GrContact } from "react-icons/gr";
 import { useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const pathName = usePathname();
 
   return (
     <nav className="fixed top-0  left-0 w-full bg-white  z-50">
@@ -95,25 +97,39 @@ const Navbar = () => {
 
                 <ul className="flex flex-col gap-4 font-medium text-gray-700 px-6">
                   <li>
-                    <Link href="#">Prices</Link>
+                    <Link onClick={() => setOpen(false)} href="/">
+                      Home
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Book</Link>
+                    <Link onClick={() => setOpen(false)} href="/about">
+                      About Us
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Schedules</Link>
+                    <Link onClick={() => setOpen(false)} href="#">
+                      ESD Services
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Tracking</Link>
+                    <Link onClick={() => setOpen(false)} href="#">
+                      Products
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Manage</Link>
+                    <Link onClick={() => setOpen(false)} href="#">
+                      Services
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Services</Link>
+                    <Link onClick={() => setOpen(false)} href="#">
+                      Company
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/contact">Contact us</Link>
+                    <Link onClick={() => setOpen(false)} href="/contact">
+                      Contact us
+                    </Link>
                   </li>
                 </ul>
                 {/* 
@@ -156,11 +172,14 @@ const Navbar = () => {
           {navLink_2.map((l, index) => (
             <div key={index}>
               <Link
-                href="#"
-                className="flex p-2 hover:bg-gray-200 transition-all duration-300 items-center rounded"
+                href={l.path}
+                className={` p-2 hover:bg-gray-200 transition-all duration-300 items-center rounded ${
+                  pathName === l.path
+                    ? " border-b-3 border-b-neutral-800"
+                    : "hover:bg-none"
+                }`}
               >
                 {l.title}
-                <li>{l.icon}</li>
               </Link>
             </div>
           ))}

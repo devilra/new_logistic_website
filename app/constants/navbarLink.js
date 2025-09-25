@@ -36,17 +36,21 @@ const navlink_1 = [
 const navLink_2 = [
   {
     title: "Home",
+    path: "/",
   },
   {
     title: "About Us",
+    path: "/about",
     //icon: <IoIosArrowDown />,
   },
   {
     title: "ESD Services",
-    icon: <IoIosArrowDown />,
+    path: "/esd",
+    // icon: <IoIosArrowDown />,
   },
   {
     title: "Products",
+    path: "/products",
   },
   // {
   //   title: "Industries Served",
@@ -54,11 +58,13 @@ const navLink_2 = [
   // },
   {
     title: "Services",
-    icon: <IoIosArrowDown />,
+    path: "/service",
+    // icon: <IoIosArrowDown />,
   },
   {
     title: "Company",
-    icon: <IoIosArrowDown />,
+    path: "/company",
+    // icon: <IoIosArrowDown />,
   },
 ];
 

@@ -304,7 +304,7 @@ const Hero = () => {
 
         {/* form Section */}
 
-        <section className="max-w-6xl mx-auto px-6 pb-28">
+        {/* <section className="max-w-6xl mx-auto px-6 pb-28">
           <h2 className="text-2xl md:text-3xl mb-3">
             Sign up to the ESD products newsletter
           </h2>
@@ -315,9 +315,8 @@ const Hero = () => {
             to your inbox.
           </p>
 
-          {/* Form */}
           <form className="space-y-6">
-            {/* First + Last name */}
+         
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium mb-1">
@@ -341,7 +340,7 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Email + Job Role */}
+           
             <div className="grid grid-cols-1 md:w-1/2 gap-4">
               <div>
                 <label className="block text-sm font-medium mb-1">Email</label>
@@ -365,7 +364,7 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Company + Country */}
+            
             <div className="grid grid-cols-1 md:w-1/2 gap-4">
               <div>
                 <label className="block text-sm font-medium mb-1">
@@ -390,7 +389,7 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Checkbox */}
+            
             <div className="flex items-start  md:w-[1000px] space-x-2">
               <input type="checkbox" className="mt-1" />
               <p className="text-sm text-gray-600">
@@ -410,7 +409,7 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Extra note */}
+          
             <p className="text-sm text-gray-600">
               Please tick the box above then click <strong>Submit</strong>.
             </p>
@@ -424,7 +423,6 @@ const Hero = () => {
               .
             </p>
 
-            {/* Submit */}
             <button
               type="submit"
               className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition"
@@ -432,7 +430,7 @@ const Hero = () => {
               Submit
             </button>
           </form>
-        </section>
+        </section> */}
       </section>
     </div>
   );

@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer/Footer";
 import NProgressProvider from "./providers/NProgressProvider";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const saira = Saira({
   subsets: ["latin"],
