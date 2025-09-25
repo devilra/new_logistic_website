@@ -257,8 +257,8 @@ const Hero = () => {
                   className="rounded-xl shadow-lg w-full h-auto"
                 />
               </div>
-              <div className="md:pt-5">
-                <h2 className="text-2xl md:text-4xl  mb-4 ">
+              <div className="md:pt-6">
+                <h2 className="text-2xl md:text-4xl mb-4 ">
                   UREC ESD Gloves & Wristband
                 </h2>
                 <p className="text-gray-700 mb-4">
