@@ -1,12 +1,34 @@
 "use client";
 
-import { helpItems } from "@/public/contact/contact";
+import { helpItems } from "@/app/constants/contact";
 import Image from "next/image";
 import { useState } from "react";
 import { CiMail } from "react-icons/ci";
 
 export default function Contact() {
   const [country, setCountry] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    country: "",
+    postcode: "",
+    enquiry: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // api call panna inga code add panna vendiyathu
+  };
 
   return (
     <div>
@@ -16,10 +38,9 @@ export default function Contact() {
         {/* Title */}
         <h1 className="text-3xl md:text-5xl  text-center mb-4">Contact us</h1>
         <p className="text-center max-w-2xl mx-auto text-gray-600 mb-10">
-          Our dedicated team of logistics experts is here for you. Whether you
-          have inquiries about cargo status or want to know more about our
-          solutions, please don&apos;t hesitate to contact us, and we will be
-          delighted to assist you.
+          We’d love to hear from you! Whether you have questions, feedback, or
+          partnership inquiries, our team is here to assist you. Reach out today
+          and we’ll get back to you as soon as possible.
         </p>
 
         {/* Cards */}
@@ -27,17 +48,20 @@ export default function Contact() {
           {/* Sales */}
           <div className="rounded-lg border border-black/20 shadow-sm overflow-hidden">
             <Image
-              src="/images/g7.jpg" // replace with your image
+              src="/contact/c1.jpg"
               alt="Sales"
               width={500}
               height={300}
-              className="w-full h-48 object-cover"
+              className="w-full h-48 object-contain"
             />
             <div className="p-4">
               <h2 className="text-lg  mb-2">Sales</h2>
               <p className="text-gray-600 mb-4">
-                We can help if you&apos;re an existing customer or interested in
-                doing business with us
+                Explore our wide range of products including Networking
+                Ionizers, Ionizing Air Bars, Ionizing Air Guns/Nozzles, Ionizing
+                Snakes/Nets, and precision Instruments and Testers. We provide
+                reliable solutions to meet all your ionization and testing
+                needs.
               </p>
               <div className="flex gap-2">
                 <button className="bg-black text-white px-4 py-2 rounded-lg">
@@ -51,7 +75,7 @@ export default function Contact() {
           {/* Support */}
           <div className="rounded-lg border border-black/20 shadow-sm overflow-hidden">
             <Image
-              src="/images/g9.jpg" // replace with your image
+              src="/contact/c2.jpg" // replace with your image
               alt="Support"
               width={500}
               height={300}
@@ -60,8 +84,10 @@ export default function Contact() {
             <div className="p-4">
               <h2 className="text-lg  mb-2">Support</h2>
               <p className="text-gray-600 mb-4">
-                Support for existing or prospective customers, with ongoing or
-                upcoming transactions
+                Our Next Support team is always ready to assist you with product
+                selection, technical guidance, and after-sales support. Reach
+                out anytime to get expert help and ensure smooth operation of
+                your ionization solutions
               </p>
               <div className="flex gap-2">
                 <button className="bg-black text-white px-4 py-2 rounded-lg">
@@ -77,7 +103,7 @@ export default function Contact() {
           {/* Local Office */}
           <div className="rounded-lg border border-black/20 shadow-sm overflow-hidden">
             <Image
-              src="/contact/c3.webp"
+              src="/contact/c3.jpg"
               alt="office"
               width={500}
               height={300}
@@ -215,6 +241,177 @@ export default function Contact() {
             .
           </p>
         </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl   md:text-5xl text-center mb-12">
+            Contact Details
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex flex-col justify-center space-y-4">
+              <div>
+                <h3 className="text-xl font-semibold">Head Office</h3>
+                <p>
+                  21, Vallakottai Murugan Street, Kilkatalai, Chennai - 600117
+                </p>
+                <p>Contact No: +91 93814 55455 / +91 90031 28241</p>
+                <p>
+                  Email:{" "}
+                  <a href="mailto:sales@neufdawn.com" className="text-blue-600">
+                    sales@neufdawn.com
+                  </a>
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold">Office Address</h3>
+                <p>
+                  Shop No.3, Maple Shop Building, Ground Floor, Thriveni Nagar,
+                  Vadakkupattu, Kundrathur TK, Kanchipuram Dist., Tamilnadu -
+                  603204
+                </p>
+              </div>
+            </div>
+
+            <div className="w-full h-96 md:h-[400px] ">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.348372749267!2d80.0349015!3d13.034158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266633f973a91%3A0x7dca5b362f735e50!2sVallakottai%20Murugan%20St%2C%20Chennai%2C%20Tamil%20Nadu%20600117!5e0!3m2!1sen!2sin!4v1695700000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                className="border-0 rounded-lg"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full  bg-gray-100/10 py-10">
+        <div>
+          <h1 className="text-3xl md:text-5xl  text-center my-5">
+            Get In Touch
+          </h1>
+        </div>
+        <form
+          onSubmit={handleSubmit}
+          className="w-full max-w-6xl bg-white/50 grid grid-cols md:grid-cols-2  gap-5  rounded-lg p-6 space-y-5"
+        >
+          {/* Name */}
+          <div>
+            <label className="block text-sm font-medium mb-1">
+              Name <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              name="name"
+              required
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Email */}
+          <div>
+            <label className="block text-sm font-medium mb-1">
+              Email Address <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Company Name */}
+          <div>
+            <label className="block text-sm font-medium mb-1">
+              Company Name
+            </label>
+            <input
+              type="text"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Phone */}
+          <div>
+            <label className="block text-sm font-medium mb-1">
+              Phone Number <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="tel"
+              name="phone"
+              required
+              value={formData.phone}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Country */}
+          <div>
+            <label className="block text-sm font-medium mb-1">Country</label>
+            <select
+              name="country"
+              value={formData.country}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md p-2"
+            >
+              <option value="">Select Country</option>
+              <option value="India">India</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+              <option value="Germany">Germany</option>
+            </select>
+          </div>
+
+          {/* Postcode */}
+          <div>
+            <label className="block text-sm font-medium mb-1">
+              Postcode <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              name="postcode"
+              required
+              value={formData.postcode}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Enquiry */}
+          <div>
+            <label className="block text-sm font-medium mb-1">Enquiry</label>
+            <textarea
+              name="enquiry"
+              rows="4"
+              value={formData.enquiry}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+          </div>
+
+          {/* Submit */}
+          <div className="pt-4">
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
       </section>
     </div>
   );

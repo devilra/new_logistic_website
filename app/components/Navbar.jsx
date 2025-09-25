@@ -154,7 +154,11 @@ const Navbar = () => {
               <div key={index}>
                 <Link
                   href={l.path}
-                  className="flex items-center p-2 hover:bg-gray-200 transition-all duration-300 gap-1 rounded text-[16px]"
+                  className={` flex gap-2 p-2 hover:bg-gray-200 transition-all duration-300 items-center rounded ${
+                    pathName === l.path
+                      ? " border-b-3 border-b-neutral-800"
+                      : "hover:bg-none"
+                  }`}
                 >
                   {l.icon}
                   <li>{l.title}</li>

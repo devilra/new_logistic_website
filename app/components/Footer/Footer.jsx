@@ -20,7 +20,7 @@ const Footer = () => {
     <footer className="bg-gray-100 py-10 mt-10">
       <div className="max-w-7xl mx-auto px-6">
         {/* Grid layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-none lg:flex  lg:justify-between lg:px-20  gap-8">
           {/* Logo + Social */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="pb-10">
@@ -106,7 +106,7 @@ const Footer = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col items-center md:items-end gap-3">
+          {/* <div className="flex flex-col items-center md:items-end gap-3">
             <button className="px-5 py-2 bg-white border rounded-lg shadow-sm hover:bg-gray-50">
               Talk to an expert
             </button>
@@ -116,7 +116,7 @@ const Footer = () => {
             <button className="px-5 py-2 bg-white border rounded-lg shadow-sm hover:bg-gray-50">
               Subscribe to our newsletter
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Divider */}
