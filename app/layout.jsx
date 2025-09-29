@@ -5,6 +5,8 @@ import Footer from "./components/Footer/Footer";
 import NProgressProvider from "./providers/NProgressProvider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const saira = Saira({
   subsets: ["latin"],
@@ -33,7 +35,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${saira.className}}  antialiased`}>
         <Navbar />
-        <NProgressProvider> {children}</NProgressProvider>
+        <NProgressProvider>
+          {" "}
+          {children}
+          <ToastContainer position="top-right" autoClose={3000} />
+        </NProgressProvider>
         <Footer />
       </body>
     </html>

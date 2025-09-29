@@ -2,11 +2,17 @@
 
 import { helpItems } from "@/app/constants/contact";
 import Image from "next/image";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { CiMail } from "react-icons/ci";
+import countryList from "react-select-country-list";
+import axios from "axios";
+import { toast } from "react-toastify";
+import API from "../api";
 
 export default function Contact() {
   const [country, setCountry] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,6 +23,8 @@ export default function Contact() {
     enquiry: "",
   });
 
+  const countries = useMemo(() => countryList().getData(), []);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -24,10 +32,34 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // api call panna inga code add panna vendiyathu
+    setLoading(true);
+    try {
+      const res = await API.post("/contact", formData);
+
+      //console.log(res);
+
+      if (res.data.success) {
+        toast.success("✅ Your message has been sent!");
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          country: "",
+          postcode: "",
+          enquiry: "",
+        });
+      } else {
+        toast.error("❌ Failed to send. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("⚠️ Server error. Try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -368,10 +400,11 @@ export default function Contact() {
               className="w-full border border-gray-300 rounded-md p-2"
             >
               <option value="">Select Country</option>
-              <option value="India">India</option>
-              <option value="United Kingdom">United Kingdom</option>
-              <option value="United States">United States</option>
-              <option value="Germany">Germany</option>
+              {countries.map((c) => (
+                <option key={c.value} value={c.value}>
+                  {c.label}
+                </option>
+              ))}
             </select>
           </div>
 
@@ -406,9 +439,14 @@ export default function Contact() {
           <div className="pt-4">
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
+              disabled={loading}
+              className={`w-full  ${
+                loading
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-blue-600 hover:bg-blue-700 cursor-pointer"
+              } text-white py-2 px-4 rounded-md transition `}
             >
-              Submit
+              {loading ? "Sending..." : "Submit"}
             </button>
           </div>
         </form>
