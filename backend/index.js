@@ -8,7 +8,7 @@ const contactRoute = require("./routes/contactRoutes");
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000", "https://neuf-dawn-amigo.vercel.app"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
